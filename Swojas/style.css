@@ -1,0 +1,75 @@
+/* ===== Base ===== */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  line-height: 1.6;
+  color: #1a2236;
+  background: #f5f3ee;
+}
+
+.container { width: 92%; max-width: 1100px; margin: 0 auto; }
+
+section { padding: 24px 0; }
+
+img { max-width: 100%; height: auto; border-radius: 50%; }
+
+/* ===== Header (mobile first: stacked) ===== */
+header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 4%;
+  background: #1e3a8a;
+  color: white;
+}
+header h1 { margin: 0; }
+
+nav a { color: white; margin-right: 12px; text-decoration: none; }
+nav a:hover, nav a:focus { text-decoration: underline; }
+
+/* ===== Hero ===== */
+.hero { display: flex; flex-wrap: wrap; align-items: center; gap: 24px; }
+.btn {
+  display: inline-block;
+  background: #1e3a8a;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+.btn:hover { background: #f2994a; color: #1a2236; }
+
+/* ===== Table ===== */
+table, th, td { border: 1px solid #ccc; border-collapse: collapse; padding: 8px 14px; }
+th { background: #e3e9f5; }
+
+/* ===== Project cards (Flexbox) ===== */
+.cards { display: flex; flex-wrap: wrap; gap: 20px; }
+.card {
+  flex: 1 1 260px;
+  padding: 16px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+.card:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, .15); }
+
+/* ===== Form ===== */
+form { display: flex; flex-direction: column; gap: 8px; max-width: 400px; }
+input, select, button { padding: 8px; font-size: 16px; }
+button { background: #1e3a8a; color: white; border: none; border-radius: 6px; cursor: pointer; }
+
+/* ===== Footer ===== */
+footer { text-align: center; padding: 20px; background: #1a2236; color: #ccc; }
+footer a { color: #f2994a; }
+
+/* ===== Screens 768px and wider ===== */
+@media (min-width: 768px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
