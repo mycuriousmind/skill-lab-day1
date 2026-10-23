@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Yashwin Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Syne:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top" id="brand-name">Yashwin</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a class="link" href="#about">About</a>
+      <a class="link" href="#achievements">Achievements</a>
+      <a class="link" href="#experience">Experience</a>
+      <a class="link" href="#skills">Skills</a>
+      <a class="link" href="#contact">Contact</a>
+    </nav>
+    <button class="icon-btn" id="theme-btn" type="button">Switch theme</button>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <div class="hero">
+    <div class="hero-copy" id="hero-copy">
+      <p class="label">Portfolio</p>
+      <h1 id="h-name">Yashwin</h1>
+      <p class="role" id="h-role"></p>
+      <p class="tagline" id="h-tag"></p>
+      <div class="cta">
+        <a class="btn" href="#achievements">See achievements</a>
+        <a class="btn ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="sec-head"><div><p class="label">About</p><h2>Background</h2></div></div>
+    <div class="about">
+      <p id="about-text"></p>
+      <dl class="facts" id="facts"></dl>
+    </div>
+  </section>
+
+  <section id="achievements">
+    <div class="sec-head">
+      <div><p class="label">Achievements</p><h2>Selected results</h2></div>
+      <div class="chips" id="chips" role="group" aria-label="Filter achievements by category"></div>
+    </div>
+    <div class="grid" id="grid"></div>
+
+    <details class="add" id="add-panel">
+      <summary>Add an achievement</summary>
+      <form id="add-form" autocomplete="off">
+        <div class="field"><label for="f-title">Title</label><input id="f-title" required maxlength="120" placeholder="What you achieved"></div>
+        <div class="field"><label for="f-org">Organisation or project</label><input id="f-org" maxlength="80" placeholder="Where it happened"></div>
+        <div class="field"><label for="f-date">Date</label><input id="f-date" maxlength="30" placeholder="e.g. Mar 2026"></div>
+        <div class="field"><label for="f-cat">Category</label><input id="f-cat" list="cat-list" maxlength="30" placeholder="Research, Award, Project, Work"><datalist id="cat-list"></datalist></div>
+        <div class="field full"><label for="f-desc">What you did and the outcome</label><textarea id="f-desc" maxlength="400" placeholder="Describe the action and the measurable result"></textarea></div>
+        <div class="field full"><label for="f-metric">Key result (optional)</label><input id="f-metric" maxlength="80" placeholder="e.g. Cut runtime from 14 min to 2 min"></div>
+        <div class="full form-actions">
+          <button class="btn" type="submit">Add to portfolio</button>
+          <button class="btn ghost" type="button" id="copy-json">Copy my entries as JSON</button>
+          <span class="note" id="form-note">Entries you add are saved in this browser only. Paste the JSON into the data block at the top of the page script to keep them permanently.</span>
+        </div>
+      </form>
+    </details>
+  </section>
+
+  <section id="experience">
+    <div class="sec-head"><div><p class="label">Experience</p><h2>Where I have worked</h2></div></div>
+    <ol class="timeline" id="timeline"></ol>
+  </section>
+
+  <section id="skills">
+    <div class="sec-head"><div><p class="label">Skills</p><h2>Tools and methods</h2></div></div>
+    <div class="skills" id="skill-groups"></div>
+  </section>
+
+  <section id="education">
+    <div class="sec-head"><div><p class="label">Education</p><h2>Training</h2></div></div>
+    <div class="edu" id="edu"></div>
+  </section>
+
+  <section id="contact">
+    <div class="sec-head"><div><p class="label">Contact</p><h2>Let's talk</h2></div></div>
+    <div class="contact">
+      <p id="contact-text"></p>
+      <div>
+        <div class="mail"><code id="mail-text"></code><button class="icon-btn" type="button" id="copy-mail">Copy address</button></div>
+        <div class="links" id="links"></div>
+      </div>
+    </div>
+  </section>
+
+  <footer><span id="foot-name"></span><span class="mono">Sample content: replace it in the data block</span></footer>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
